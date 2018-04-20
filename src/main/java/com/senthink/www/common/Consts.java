@@ -10,6 +10,9 @@ public class Consts {
 
     public static final String directExchangeName = "directExchange";
 
+    public static final String fanoutExchangeName = "fanoutExchange";
+    public static final String topicExchangeName = "topicQueueExchange";
+
     public static final String directQueueName = "direct";
 
     public static final String routingKey = "direct1";

@@ -5,6 +5,7 @@ import org.springframework.amqp.core.DirectExchange;
 import org.springframework.amqp.core.Exchange;
 import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 /**
@@ -13,7 +14,7 @@ import org.springframework.stereotype.Component;
  * @Date:Created $YEAR-$MON-19 16:17
  * @modified by:
  */
-@Component
+@Configuration
 public class RabbitDirectConfiguration {
 
 
@@ -47,7 +48,7 @@ public class RabbitDirectConfiguration {
 
     @Bean
     public Binding binding1(){
-        return new Binding(directQueueName1, Binding.DestinationType.QUEUE,directExchangeName,"",null);
+        return new Binding(directQueueName1, Binding.DestinationType.QUEUE,directExchangeName,directQueueName1,null);
     }
 
 
